@@ -69,3 +69,4 @@ plot(TukeyHSD(model1), las=2)
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+In conclusion LT High School has the lowest scores compared to the other High School
