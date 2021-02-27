@@ -34,11 +34,20 @@ Each person whose data was collected for the dataset "scores" is a "case". We wi
 ## Descriptive Results
 
 ### Graphical Descriptive Results
+```{r}
+basicCN <- ggplot(scores,aes(x=DEGREE,y=WORDSUM))
+basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='errorbar') + labs(title="DEGREE vs WORDSUM scores")
+```
+Cleary, the results from LT high school are much lower than the other scores (except for High school). High school is similar in this respect, but its scores seem more varied. For the most part, graduates had higher scores than any other factor/ category; the bottom of the graduate box doesn't even reach the top of the High School and LT High School boxes. 
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ### Numerical Descriptive Results
+```{r}
+favstats(WORDSUM~DEGREE,data=scores)
+```
 
+Similarly, to the boxplot, this summary shows the graduates with the highest average (and highest median) WORDSUM scores, but not by much (Junior College is close)/ LT HS has the lowest average (and median),as expected. 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ## Inferential Results
